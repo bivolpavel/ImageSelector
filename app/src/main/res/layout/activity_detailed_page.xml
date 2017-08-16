@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.DetailedPageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#8398a1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Image Selector Task"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_close"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fafafa">
+
+        <LinearLayout
+            android:id="@+id/image_title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/image_title"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/default_input_border"
+                android:hint="Name"
+                android:paddingStart="15dp" />
+
+            <LinearLayout
+                android:id="@+id/save_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/done"
+                android:orientation="horizontal"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/random_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/select_button"
+            android:layout_centerHorizontal="true"
+            android:text="Random" />
+
+        <Button
+            android:id="@+id/select_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="Select" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/random_button"
+            android:layout_below="@id/image_title_container"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
